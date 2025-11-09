@@ -1,0 +1,28 @@
+.sobre {
+    padding: 70px 20px;
+    text-align: center;
+}
+
+.sobre-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.sobre h2 {
+    font-size: 2rem;
+    color: #c0392b;
+    margin-bottom: 25px;
+}
+
+.sobre p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: #444;
+}
+
+.sobre img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}

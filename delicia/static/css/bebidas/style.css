@@ -1,0 +1,61 @@
+.bebidas-section {
+    text-align: center;
+    padding: 70px 20px;
+}
+
+.bebidas-section h2 {
+    font-size: 2rem;
+    color: #c0392b;
+    margin-bottom: 15px;
+}
+
+.descricao {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+.bebidas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.bebida-item {
+    background: #fafafa;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+}
+
+.bebida-item:hover {
+    transform: translateY(-5px);
+}
+
+.bebida-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.bebida-item h3 {
+    color: #333;
+    margin-bottom: 8px;
+    font-size: 1.2rem;
+}
+
+.bebida-item p {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.bebida-item span {
+    font-weight: bold;
+    color: #c0392b;
+}
