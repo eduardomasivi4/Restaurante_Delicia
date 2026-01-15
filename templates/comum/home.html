@@ -1,0 +1,91 @@
+{% extends "base/base.html" %}
+{% load static %}
+
+{% block title %}Home | Restaurante{% endblock %}
+
+{% block content %}
+
+<!-- HERO / BANNER PRINCIPAL -->
+<section class="hero">
+    <div class="hero-overlay">
+        <div class="hero-content">
+            <h1>Experiência Gastronómica Única</h1>
+            <p>Sabor, elegância e qualidade em cada prato</p>
+            <a href="{% url 'menu:listar' %}" class="btn-primary">
+                Ver Cardápio
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- SOBRE O RESTAURANTE -->
+<section class="about">
+    <div class="container">
+        <div class="about-text">
+            <h2>Sobre o Restaurante</h2>
+            <p>
+                Somos um restaurante dedicado a oferecer pratos preparados
+                com ingredientes selecionados, combinando tradição e inovação
+                para proporcionar uma experiência inesquecível.
+            </p>
+            <a href="{% url 'comum:sobre' %}" class="btn-secondary">
+                Saiba Mais
+            </a>
+        </div>
+        <div class="about-image">
+            <img src="{% static 'images/about.jpg' %}" alt="Restaurante">
+        </div>
+    </div>
+</section>
+
+<!-- DESTAQUES DO MENU -->
+<section class="menu-highlight">
+    <div class="container">
+        <h2>Destaques do Cardápio</h2>
+
+        <div class="menu-grid">
+            <div class="menu-item">
+                <img src="{% static 'images/prato1.jpg' %}" alt="Prato 1">
+                <h3>Prato Especial</h3>
+                <p>Sabor único preparado pelo nosso chef.</p>
+            </div>
+
+            <div class="menu-item">
+                <img src="{% static 'images/prato2.jpg' %}" alt="Prato 2">
+                <h3>Receita Tradicional</h3>
+                <p>Uma combinação perfeita de tradição e sabor.</p>
+            </div>
+
+            <div class="menu-item">
+                <img src="{% static 'images/prato3.jpg' %}" alt="Prato 3">
+                <h3>Especial da Casa</h3>
+                <p>O prato mais pedido pelos nossos clientes.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- RESERVAS -->
+<section class="reservation-cta">
+    <div class="container">
+        <h2>Reserve a sua Mesa</h2>
+        <p>
+            Garanta o seu lugar e desfrute de uma experiência gastronómica exclusiva.
+        </p>
+        <a href="{% url 'reservas:criar' %}" class="btn-primary">
+            Fazer Reserva
+        </a>
+    </div>
+</section>
+
+<!-- CONTACTO / LOCALIZAÇÃO -->
+<section class="contact">
+    <div class="container">
+        <h2>Visite-nos</h2>
+        <p>📍 Luanda, Angola</p>
+        <p>📞 +244 900 000 000</p>
+        <p>🕒 Seg - Dom: 10h às 22h</p>
+    </div>
+</section>
+
+{% endblock %}
