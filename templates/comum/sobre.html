@@ -2,117 +2,121 @@
 {% load static %}
 
 {% block title %}Sobre Nós | Restaurante{% endblock %}
+{% block extra_css %} <link rel="stylesheet" href="{% static "css/sobre.css" %}"> {% endblock extra_css %}
 
 {% block content %}
 
-<!-- BANNER / CABEÇALHO -->
-<section class="about-hero">
-    <div class="about-hero-overlay">
+<div class="menu-card animate">
+    <!-- BANNER / CABEÇALHO -->
+    <section class="about-hero">
+        <div class="about-hero-overlay">
+            <div class="container">
+                <h1>Sobre o Restaurante</h1>
+                <p>Tradição, qualidade e paixão pela gastronomia</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- HISTÓRIA -->
+    <section class="about-history">
         <div class="container">
-            <h1>Sobre o Restaurante</h1>
-            <p>Tradição, qualidade e paixão pela gastronomia</p>
-        </div>
-    </div>
-</section>
-
-<!-- HISTÓRIA -->
-<section class="about-history">
-    <div class="container">
-        <div class="about-grid">
-            <div class="about-text">
-                <h2>Nossa História</h2>
-                <p>
-                    Fundado com o objetivo de proporcionar experiências gastronómicas
-                    únicas, o nosso restaurante nasceu da paixão pela culinária e
-                    pelo atendimento de excelência.
-                </p>
-                <p>
-                    Ao longo dos anos, conquistámos a confiança dos nossos clientes
-                    através de pratos cuidadosamente preparados e um ambiente acolhedor.
-                </p>
-            </div>
-
-            <div class="about-image">
-                <img src="{% static 'images/sobre1.jpg' %}" alt="História do Restaurante">
+            <div class="about-grid">
+                <div class="about-text">
+                    <h2>Nossa História</h2>
+                    <p>
+                        Fundado com o objetivo de proporcionar experiências gastronómicas
+                        únicas, o nosso restaurante nasceu da paixão pela culinária e
+                        pelo atendimento de excelência.
+                    </p>
+                    <p>
+                        Ao longo dos anos, conquistámos a confiança dos nossos clientes
+                        através de pratos cuidadosamente preparados e um ambiente acolhedor.
+                    </p>
+                </div>
+    
+                <div class="about-image">
+                    <img src="{% static 'images/background.jpg' %}" alt="História do Restaurante">
+                </div>
             </div>
         </div>
-    </div>
-</section>
-
-<!-- MISSÃO, VISÃO E VALORES -->
-<section class="about-values">
-    <div class="container">
-        <h2>Nossos Valores</h2>
-
-        <div class="values-grid">
-            <div class="value-card">
-                <h3>Missão</h3>
-                <p>
-                    Oferecer refeições de alta qualidade, combinando sabor,
-                    inovação e um atendimento excepcional.
-                </p>
-            </div>
-
-            <div class="value-card">
-                <h3>Visão</h3>
-                <p>
-                    Ser referência em gastronomia, reconhecido pela excelência
-                    e pela experiência proporcionada aos clientes.
-                </p>
-            </div>
-
-            <div class="value-card">
-                <h3>Valores</h3>
-                <p>
-                    Qualidade, respeito, compromisso, inovação e paixão pelo que fazemos.
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- EQUIPE -->
-<section class="about-team">
-    <div class="container">
-        <h2>Nossa Equipe</h2>
-        <p>
-            Contamos com profissionais experientes e apaixonados pela arte
-            de bem servir.
-        </p>
-
-        <div class="team-grid">
-            <div class="team-member">
-                <img src="{% static 'images/team1.jpg' %}" alt="Chef Principal">
-                <h4>Chef Principal</h4>
-                <span>Gastronomia Internacional</span>
-            </div>
-
-            <div class="team-member">
-                <img src="{% static 'images/team2.jpg' %}" alt="Gerente">
-                <h4>Gerente</h4>
-                <span>Gestão e Atendimento</span>
-            </div>
-
-            <div class="team-member">
-                <img src="{% static 'images/team3.jpg' %}" alt="Equipe">
-                <h4>Equipe</h4>
-                <span>Excelência no Serviço</span>
+    </section>
+    
+    <!-- MISSÃO, VISÃO E VALORES -->
+    <section class="about-values">
+        <div class="container">
+            <h2>Nossos Valores</h2>
+    
+            <div class="values-grid">
+                <div class="value-card">
+                    <h3>Missão</h3>
+                    <p>
+                        Oferecer refeições de alta qualidade, combinando sabor,
+                        inovação e um atendimento excepcional.
+                    </p>
+                </div>
+    
+                <div class="value-card">
+                    <h3>Visão</h3>
+                    <p>
+                        Ser referência em gastronomia, reconhecido pela excelência
+                        e pela experiência proporcionada aos clientes.
+                    </p>
+                </div>
+    
+                <div class="value-card">
+                    <h3>Valores</h3>
+                    <p>
+                        Qualidade, respeito, compromisso, inovação e paixão pelo que fazemos.
+                    </p>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+    
+    <!-- EQUIPE -->
+    <section class="about-team">
+        <div class="container">
+            <h2>Nossa Equipe</h2>
+            <p>
+                Contamos com profissionais experientes e apaixonados pela arte
+                de bem servir.
+            </p>
+    
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="{% static 'images/background.jpg' %}" alt="Chef Principal">
+                    <h4>Chef Principal</h4>
+                    <span>Gastronomia Internacional</span>
+                </div>
+    
+                <div class="team-member">
+                    <img src="{% static 'images/background.jpg' %}" alt="Gerente">
+                    <h4>Gerente</h4>
+                    <span>Gestão e Atendimento</span>
+                </div>
+    
+                <div class="team-member">
+                    <img src="{% static 'images/background.jpg' %}" alt="Equipe">
+                    <h4>Equipe</h4>
+                    <span>Excelência no Serviço</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CHAMADA PARA AÇÃO -->
+    <section class="about-cta">
+        <div class="container">
+            <h2>Venha conhecer o nosso espaço</h2>
+            <p>
+                Esperamos por si para viver uma experiência gastronómica inesquecível.
+            </p>
+            <a href="{% url 'reservas:criar' %}" class="btn-primary">
+                Fazer Reserva
+            </a>
+        </div>
+    </section>
 
-<!-- CHAMADA PARA AÇÃO -->
-<section class="about-cta">
-    <div class="container">
-        <h2>Venha conhecer o nosso espaço</h2>
-        <p>
-            Esperamos por si para viver uma experiência gastronómica inesquecível.
-        </p>
-        <a href="{% url 'reservas:criar' %}" class="btn-primary">
-            Fazer Reserva
-        </a>
-    </div>
-</section>
+</div>
 
 {% endblock %}

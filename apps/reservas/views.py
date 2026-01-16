@@ -1,7 +1,7 @@
-#from django.shortcuts import render
-from django.http import HttpResponse
+from django.shortcuts import render
+#from django.http import HttpResponse
 
 # Create your views here.
 
 def criar(request):
-    return HttpResponse('criar reserva testado!')
+    return render (request, 'reservas/criar.html')

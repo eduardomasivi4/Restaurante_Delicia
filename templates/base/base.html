@@ -1,10 +1,12 @@
-
 <!DOCTYPE html>
 <html lang="pt">
 <head>
     <meta charset="UTF-8">
     <title>{% block title %}Restaurante{% endblock %}</title>
-    <link rel="stylesheet" href="">
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    {% block extra_css %}{% endblock extra_css %}
 </head>
 <body>
     {% include 'base/partials/navbar.html' %}
@@ -12,3 +14,5 @@
     {% include 'base/partials/footer.html' %}
 </body>
 </html>
+<script src="{% static 'js/main.js' %}"></script>
+<!---->
