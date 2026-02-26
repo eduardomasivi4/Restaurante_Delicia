@@ -1,7 +1,11 @@
 from django.shortcuts import render
+from .models import Pratos
 #from django.http import HttpResponse
 
 # Create your views here.
 
 def listar(request):
-    return render (request, 'menu/lista.html')
+    pratos = Pratos.objects.all()
+    return render (request, 'menu/lista.html', {
+        'pratos' : pratos
+    })

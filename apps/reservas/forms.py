@@ -7,5 +7,6 @@ class Reserva(forms.Form):
     email= forms.EmailField()
     data = forms.DateField(widget=forms.DateInput(attrs={'type': 'date'}))
     hora = forms.TimeField(widget=forms.TimeInput(attrs={'type': 'time'}))
-    pessoas= forms.IntegerField()
+    pessoas= forms.IntegerField(min_value=1)
     observacoes= forms.CharField(widget=forms.Textarea(attrs={'placeholder': 'Alergias, Limitações...'}), required=False)
+    

@@ -1,12 +1,12 @@
 # Restaurante_Delicia
 
-Problema: 
+## Problema: 
     Atualmente, muitos restaurantes locais enfrentam dificuldades em divulgar seus serviços online, organizar o cardápio e gerir reservas de mesas de forma eficiente. Grande parte desses estabelecimentos depende apenas de redes sociais ou atendimento presencial, o que limita o alcance do negócio e causa desorganização no processo de reservas.
     Um restaurante pretende modernizar sua presença digital através da criação de um sistema web desenvolvido em Django, com um layout moderno inspirado em um template profissional da plataforma Wix (template de restaurante), mantendo identidade visual atrativa e navegação intuitiva.
 
                 OBS: Para este projeto estou a usar o Linux
 
-1º passo:
+### 1º passo:
     Criar o ambiente virtual e as ferramentas necessárias para a criação do projeto:
         Crie uma pasta com o nome do projeto;
 
