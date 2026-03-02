@@ -1,0 +1,80 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maison Dorée</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'restaurante/css/style.css' %}">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo">
+        <span class="logo-main">MAISON</span>
+        <span class="logo-accent">Dorée</span>
+    </div>
+
+    <nav>
+        <ul class="nav-links">
+            <li><a href="#menu">Cardápio</a></li>
+            <li><a href="#historia">Sobre</a></li>
+        </ul>
+    </nav>
+
+    <a href="#reservas" class="btn-outline">Reservar</a>
+</header>
+
+
+<section class="hero" style="background: url('{% static "restaurant/images/hero.jpg" %}') center/cover no-repeat;">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1>Dorée</h1>
+        <p>Uma jornada culinária onde tradição e inovação se encontram</p>
+        <a href="#reservas" class="btn-primary">Reservar Mesa</a>
+    </div>
+</section>
+
+
+<section id="menu" class="menu-section">
+    <div class="section-header">
+        <span class="section-subtitle">GASTRONOMIA</span>
+        <h2>Nosso Cardápio</h2>
+    </div>
+
+    {% for item in menu_items %}
+    <div class="menu-item">
+        <div>
+            <h4>{{ item.nome }}</h4>
+            <p>{{ item.descricao }}</p>
+        </div>
+        <span class="price">R$ {{ item.preco }}</span>
+    </div>
+    {% endfor %}
+</section>
+
+
+<section id="reservas" class="reservation-section">
+    <div class="section-header">
+        <h2>Reserve sua Experiência</h2>
+    </div>
+
+    <form method="POST" class="reservation-form">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn-primary">Confirmar Reserva</button>
+    </form>
+</section>
+
+
+<footer class="footer">
+    <p>© 2026 Maison Dorée</p>
+</footer>
+
+<script src="{% static 'restaurante/js/script.js' %}"></script>
+
+</body>
+</html>
